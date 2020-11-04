@@ -32,7 +32,16 @@ const CityScreen = ({ match }) => {
           </Col>
           <Col md={6}>
             {" "}
-            <AverageOccupancyChart />
+            <AverageOccupancyChart
+              hourlyOccupancy={city.hourlyOccupancy}
+              // occupancy1={city.occupancy1}
+              // occupancy2={city.occupancy2}
+              // occupancy3={city.occupancy3}
+              // occupancy4={city.occupancy4}
+              // occupancy5={city.occupancy5}
+              // occupancy6={city.occupancy6}
+              // occupancy7={city.occupancy7}
+            />
           </Col>
         </Row>
 
