@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import {
   LineChart,
   Line,
@@ -54,80 +55,70 @@ import {
 //   },
 // ];
 
-const AverageOccupancyChart = ({
-  hourlyOccupancy,
-  // occupancy1,
-  // occupancy2,
-  // occupancy3,
-  // occupancy4,
-  // occupancy5,
-  // occupancy6,
-  // occupancy7,
-}) => {
-  // const hourlyOccupancy1 = hourlyOccupancy[0];
-  // const hourlyOccupancy_avg1 = hourlyOccupancy[0];
-  // const hourlyOccupancy2 = hourlyOccupancy[1][0];
-  // const hourlyOccupancy_avg2 = hourlyOccupancy[1][1];
-  // const hourlyOccupancy3 = hourlyOccupancy[2][0];
-  // const hourlyOccupancy_avg3 = hourlyOccupancy[2][1];
-  // const hourlyOccupancy4 = hourlyOccupancy[3][0];
-  // const hourlyOccupancy_avg4 = hourlyOccupancy[3][1];
-  // const hourlyOccupancy5 = hourlyOccupancy[4][0];
-  // const hourlyOccupancy_avg5 = hourlyOccupancy[4][1];
-  // const hourlyOccupancy6 = hourlyOccupancy[5][0];
-  // const hourlyOccupancy_avg6 = hourlyOccupancy[5][1];
-  // const hourlyOccupancy7 = hourlyOccupancy[6][0];
-  // const hourlyOccupancy_avg7 = hourlyOccupancy[6][1];
+const AverageOccupancyChart = ({ hourlyOccupancy }) => {
+  // const [hourlyOccupancy, setHourlyOccupancy] = useState([]);
 
-  return (
+  // useEffect(() => {
+  //   const fetchHourlyOccupancy = async () => {
+  //     const { data } = await axios.get(
+  //       `/api/cities/${match.params.id}/hourlyOccupancy`
+  //     );
+
+  //     console.log(data);
+  //     setHourlyOccupancy(data);
+  //   };
+
+  //   fetchHourlyOccupancy();
+  // }, []);
+
+  return hourlyOccupancy ? (
     <LineChart
       width={450}
       height={300}
       // data={[
       //   {
       //     name: "6:00",
-      //     Occupancy: occupancy1[0],
-      //     Occupancy_avg: occupancy1[1],
+      //     Occupancy: occupancy1,
+      //     Occupancy_avg: occupancy_avg1,
       //     amt: 400,
       //   },
       //   {
       //     name: "9:00",
-      //     Occupancy: occupancy2[0],
-      //     Occupancy_avg: occupancy2[1],
+      //     Occupancy: occupancy2,
+      //     Occupancy_avg: occupancy_avg2,
       //     amt: 400,
       //   },
       //   {
       //     name: "12:00",
-      //     Occupancy: occupancy3[0],
-      //     Occupancy_avg: occupancy3[1],
+      //     Occupancy: occupancy3,
+      //     Occupancy_avg: occupancy_avg3,
       //     amt: 400,
       //   },
       //   {
       //     name: "15:00",
-      //     Occupancy: occupancy4[0],
-      //     Occupancy_avg: occupancy4[1],
+      //     Occupancy: occupancy4,
+      //     Occupancy_avg: occupancy_avg4,
       //     amt: 400,
       //   },
       //   {
       //     name: "18:00",
-      //     Occupancy: occupancy5[0],
-      //     Occupancy_avg: occupancy5[1],
+      //     Occupancy: occupancy5,
+      //     Occupancy_avg: occupancy_avg5,
       //     amt: 400,
       //   },
       //   {
       //     name: "21:00",
-      //     Occupancy: occupancy6[0],
-      //     Occupancy_avg: occupancy6[1],
+      //     Occupancy: occupancy6,
+      //     Occupancy_avg: occupancy_avg6,
       //     amt: 400,
       //   },
       //   {
       //     name: "24:00",
-      //     Occupancy: occupancy7[0],
-      //     Occupancy_avg: occupancy7[1],
+      //     Occupancy: occupancy7,
+      //     Occupancy_avg: occupancy_avg7,
       //     amt: 400,
       //   },
       // ]}
-
       data={[
         {
           name: "6:00",
@@ -192,7 +183,7 @@ const AverageOccupancyChart = ({
       />
       <Line type="monotone" dataKey="Occupancy_avg" stroke="#82ca9d" />
     </LineChart>
-  );
+  ) : null;
 };
 
 export default AverageOccupancyChart;

@@ -16,4 +16,9 @@ app.get("/api/cities/:id", (req, res) => {
   res.json(city);
 });
 
+app.get("/api/cities/:id/hourlyOccupancy", (req, res) => {
+  const city = cities.find((c) => c._id === req.params.id);
+  res.json(city.hourlyOccupancy);
+});
+
 app.listen(5000, console.log("Server running on port 5000"));
