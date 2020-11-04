@@ -16,3 +16,11 @@
   width: 700px;
   text-align: center;
 }
+
+.scaling-top {
+  margin-top: -50px;
+}
+
+.backg-color {
+  background-color: white;
+}
