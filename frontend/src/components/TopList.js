@@ -1,7 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 
-const TopList = () => {
+const TopList = ({ totalSpace, occupied }) => {
   return (
     <Table striped bordered hover responsive className=" text-center">
       <thead>
@@ -29,6 +29,11 @@ const TopList = () => {
         </tr>
         <tr>
           <td>Krefeld</td>
+          <td>250</td>
+          <td>45%</td>
+        </tr>
+        <tr>
+          <td>Hannover</td>
           <td>250</td>
           <td>45%</td>
         </tr>

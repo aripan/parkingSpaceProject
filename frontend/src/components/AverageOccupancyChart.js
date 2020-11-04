@@ -56,69 +56,10 @@ import {
 // ];
 
 const AverageOccupancyChart = ({ hourlyOccupancy }) => {
-  // const [hourlyOccupancy, setHourlyOccupancy] = useState([]);
-
-  // useEffect(() => {
-  //   const fetchHourlyOccupancy = async () => {
-  //     const { data } = await axios.get(
-  //       `/api/cities/${match.params.id}/hourlyOccupancy`
-  //     );
-
-  //     console.log(data);
-  //     setHourlyOccupancy(data);
-  //   };
-
-  //   fetchHourlyOccupancy();
-  // }, []);
-
   return hourlyOccupancy ? (
     <LineChart
       width={450}
       height={300}
-      // data={[
-      //   {
-      //     name: "6:00",
-      //     Occupancy: occupancy1,
-      //     Occupancy_avg: occupancy_avg1,
-      //     amt: 400,
-      //   },
-      //   {
-      //     name: "9:00",
-      //     Occupancy: occupancy2,
-      //     Occupancy_avg: occupancy_avg2,
-      //     amt: 400,
-      //   },
-      //   {
-      //     name: "12:00",
-      //     Occupancy: occupancy3,
-      //     Occupancy_avg: occupancy_avg3,
-      //     amt: 400,
-      //   },
-      //   {
-      //     name: "15:00",
-      //     Occupancy: occupancy4,
-      //     Occupancy_avg: occupancy_avg4,
-      //     amt: 400,
-      //   },
-      //   {
-      //     name: "18:00",
-      //     Occupancy: occupancy5,
-      //     Occupancy_avg: occupancy_avg5,
-      //     amt: 400,
-      //   },
-      //   {
-      //     name: "21:00",
-      //     Occupancy: occupancy6,
-      //     Occupancy_avg: occupancy_avg6,
-      //     amt: 400,
-      //   },
-      //   {
-      //     name: "24:00",
-      //     Occupancy: occupancy7,
-      //     Occupancy_avg: occupancy_avg7,
-      //     amt: 400,
-      //   },
-      // ]}
       data={[
         {
           name: "6:00",

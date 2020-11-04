@@ -1,6 +1,11 @@
 const express = require("express");
-
+const dotenv = require("dotenv");
+const connectDB = require("./config/db");
 const cities = require("./data/cities");
+
+dotenv.config();
+
+connectDB();
 const app = express();
 
 app.get("/", (req, res) => {
@@ -21,4 +26,8 @@ app.get("/api/cities/:id/hourlyOccupancy", (req, res) => {
   res.json(city.hourlyOccupancy);
 });
 
-app.listen(5000, console.log("Server running on port 5000"));
+const PORT = process.env.PORT || 5000;
+app.listen(
+  PORT,
+  console.log(`Server running in ${process.env.NODE_ENV} on port ${PORT}`)
+);

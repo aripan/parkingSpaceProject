@@ -6,7 +6,7 @@ import Logo from "../components/Logo";
 import City from "../components/City";
 // import cities from "../cities";
 
-const HomeScreen = () => {
+const HomeScreen = ({ onRouteChange }) => {
   const [cities, setCities] = useState([]);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const HomeScreen = () => {
 
   return (
     <div className="">
-      <Header />
+      <Header onRouteChange={onRouteChange} />
       <div style={{ display: "flex" }}>
         <Logo />
         <Container>
