@@ -13,6 +13,7 @@ const HomeScreen = () => {
     const fetchCities = async () => {
       const { data } = await axios.get("/api/cities");
 
+      // console.log(data);
       setCities(data);
     };
 
@@ -28,7 +29,7 @@ const HomeScreen = () => {
           <h1>Available Parking Lots</h1>
           <Row>
             {cities.map((city) => (
-              <Col sm={12} md={6} lg={4} xl={3}>
+              <Col key={city.id} sm={12} md={6} lg={4} xl={3}>
                 {/* <h3>{city.name}</h3> */}
                 <City city={city} />
               </Col>

@@ -6,7 +6,7 @@ const City = ({ city }) => {
   return (
     <Card className="my-3 p-3 rounded">
       <Card.Body>
-        <Link to={`/city/${city._id}`}>
+        <Link to={`/city/${city.id}`}>
           <Card.Title as="div">
             <h5>
               <strong>{city.name}</strong>
