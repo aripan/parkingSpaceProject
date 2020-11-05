@@ -22,3 +22,5 @@ const users = [
     password: bcrypt.hashSync("password", 10),
   },
 ];
+
+export default users;
