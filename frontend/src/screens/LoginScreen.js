@@ -36,7 +36,7 @@ const LoginScreen = ({ location, history }) => {
         {loading && <Loader />}
         <Form onSubmit={submitHandler}>
           <Form.Group controlId="username">
-            <Form.Label>Username</Form.Label>
+            <Form.Label className="color-w">Username</Form.Label>
             <Form.Control
               type="username"
               placeholder="Enter username"
@@ -46,7 +46,7 @@ const LoginScreen = ({ location, history }) => {
           </Form.Group>
 
           <Form.Group controlId="password">
-            <Form.Label>Password</Form.Label>
+            <Form.Label className="color-w">Password</Form.Label>
             <Form.Control
               type="password"
               placeholder="Enter password"
@@ -60,8 +60,11 @@ const LoginScreen = ({ location, history }) => {
           </Button>
 
           <Row className="py-3">
-            <Col>
-              New User ? <Link to="/register">Register</Link>
+            <Col className="color-w">
+              New User ?{" "}
+              <Link to="/register">
+                <h5>Register</h5>
+              </Link>
             </Col>
           </Row>
         </Form>

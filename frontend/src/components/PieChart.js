@@ -4,7 +4,7 @@ import { Chart } from "react-google-charts";
 const PieChart = ({ available, occupied }) => {
   return (
     <Chart
-      width={500}
+      width={400}
       height={300}
       chartType="PieChart"
       loader={<div>Loading Chart</div>}

@@ -1,19 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import {
-  Row,
-  Col,
-  Image,
-  ListGroup,
-  Card,
-  Button,
-  Container,
-} from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import axios from "axios";
 
 import PieChart from "../components/PieChart";
 import AverageOccupancyChart from "../components/AverageOccupancyChart";
-import ParkingSpace from "../components/ParkingSpace";
+// import ParkingSpace from "../components/ParkingSpace";
 import TopList from "../components/TopList";
 
 const CityScreen = ({ match }) => {
@@ -27,7 +19,7 @@ const CityScreen = ({ match }) => {
     };
 
     fetchCity();
-  }, []);
+  }, [match]);
 
   return (
     <div className="backg-color">
@@ -46,7 +38,7 @@ const CityScreen = ({ match }) => {
             <AverageOccupancyChart hourlyOccupancy={city.hourlyOccupancy} />
           </Col>
         </Row>
-
+        <br />
         <Row>
           <Col className="px-1">
             <TopList totalSpace={city.totalSpace} occupied={city.occupied} />

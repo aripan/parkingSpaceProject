@@ -1,3 +1,4 @@
+import path from "path";
 import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
@@ -13,26 +14,24 @@ const app = express();
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("API is running");
-});
-
-// app.get("/api/cities", (req, res) => {
-//   res.json(cities);
-// });
-
-// app.get("/api/cities/:id", (req, res) => {
-//   const city = cities.find((c) => c._id === req.params.id);
-//   res.json(city);
-// });
-
-// app.get("/api/cities/:id/hourlyOccupancy", (req, res) => {
-//   const city = cities.find((c) => c._id === req.params.id);
-//   res.json(city.hourlyOccupancy);
-// });
-
 app.use("/api/cities", parkingLotRoutes);
 app.use("/api/users", userRoute);
+
+const __dirname = path.resolve();
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "/frontend/build")));
+
+  // FOR ROUTES WHICH ARE NOT DEFINED
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"))
+  );
+} else {
+  // Home route
+  app.get("/", (req, res) => {
+    res.send("Its working");
+  });
+}
 
 const PORT = process.env.PORT || 5000;
 app.listen(

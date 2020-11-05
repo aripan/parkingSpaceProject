@@ -1,11 +1,6 @@
 import React, { PureComponent } from "react";
 import { PieChart, Pie, Sector } from "recharts";
 
-// const data = [
-//   { name: "Available", value: 250 },
-//   { name: "Occupied", value: 150 },
-// ];
-
 const renderActiveShape = (props) => {
   const RADIAN = Math.PI / 180;
   const {
@@ -80,8 +75,6 @@ const renderActiveShape = (props) => {
 };
 
 export default class ParkingSpace extends PureComponent {
-  //   static jsfiddleUrl = "https://jsfiddle.net/alidingling/hqnrgxpj/";
-
   state = {
     activeIndex: 0,
   };

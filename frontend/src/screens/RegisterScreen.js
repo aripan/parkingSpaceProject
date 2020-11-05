@@ -37,7 +37,7 @@ const RegisterScreen = ({ location, history }) => {
     }
   };
   return (
-    <>
+    <div className="py-3">
       <FormContainer className="source__codePro">
         <h1>Register</h1>
         {message && <Message variant="danger">{message}</Message>}
@@ -45,7 +45,7 @@ const RegisterScreen = ({ location, history }) => {
         {loading && <Loader />}
         <Form onSubmit={submitHandler}>
           <Form.Group controlId="name">
-            <Form.Label>Name</Form.Label>
+            <Form.Label className="color-w">Name</Form.Label>
             <Form.Control
               type="name"
               placeholder="Enter name"
@@ -55,7 +55,7 @@ const RegisterScreen = ({ location, history }) => {
           </Form.Group>
 
           <Form.Group controlId="email">
-            <Form.Label>Email Address</Form.Label>
+            <Form.Label className="color-w">Email Address</Form.Label>
             <Form.Control
               type="email"
               placeholder="Enter email"
@@ -65,7 +65,7 @@ const RegisterScreen = ({ location, history }) => {
           </Form.Group>
 
           <Form.Group controlId="username">
-            <Form.Label>Username</Form.Label>
+            <Form.Label className="color-w">Username</Form.Label>
             <Form.Control
               type="username"
               placeholder="Enter username"
@@ -75,7 +75,7 @@ const RegisterScreen = ({ location, history }) => {
           </Form.Group>
 
           <Form.Group controlId="password">
-            <Form.Label>Password</Form.Label>
+            <Form.Label className="color-w">Password</Form.Label>
             <Form.Control
               type="password"
               placeholder="Enter password"
@@ -85,7 +85,7 @@ const RegisterScreen = ({ location, history }) => {
           </Form.Group>
 
           <Form.Group controlId="confirmPassword">
-            <Form.Label>Confirm Password</Form.Label>
+            <Form.Label className="color-w">Confirm Password</Form.Label>
             <Form.Control
               type="password"
               placeholder="Confirm Password"
@@ -99,13 +99,16 @@ const RegisterScreen = ({ location, history }) => {
           </Button>
           <hr />
           <Row className="py-3">
-            <Col>
-              Have an Account ? <Link to="/">Login</Link>
+            <Col className="color-w">
+              Have an Account ?{" "}
+              <Link to="/">
+                <h5>Login</h5>
+              </Link>
             </Col>
           </Row>
         </Form>
       </FormContainer>
-    </>
+    </div>
   );
 };
 

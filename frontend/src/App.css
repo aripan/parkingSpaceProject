@@ -24,3 +24,21 @@
 .backg-color {
   background-color: white;
 }
+
+.color-w {
+  color: rgb(2, 34, 2);
+}
+
+.particles {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.table-font-size {
+  font-size: 16px;
+  font-weight: 600;
+}
