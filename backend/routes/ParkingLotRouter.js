@@ -8,7 +8,7 @@ import {
 
 import { protect } from "../middleware/authMiddleware.js";
 
-router.route("/").get(protect, getParkingLotList);
-router.route("/:id").get(protect, getParkingLotById);
+router.route("/").get(getParkingLotList);
+router.route("/:id").get(getParkingLotById);
 
 export default router;

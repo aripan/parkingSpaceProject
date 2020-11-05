@@ -31,7 +31,7 @@ const CityScreen = ({ match }) => {
 
   return (
     <div className="backg-color">
-      <Link className="btn btn-light m-3 border shadow" to="/">
+      <Link className="btn btn-light m-3 border shadow" to="/cities">
         Go Back
       </Link>
       <Container>
