@@ -7,17 +7,17 @@ import City from "../components/City";
 // import cities from "../cities";
 
 const HomeScreen = () => {
-  const [cities, setCities] = useState([]);
+  const [parkingLots, setParkingLots] = useState([]);
 
   useEffect(() => {
-    const fetchCities = async () => {
-      const { data } = await axios.get("/api/cities");
+    const fetchParkingLots = async () => {
+      const { data } = await axios.get("/api/parkinglots");
 
-      // console.log(data);
-      setCities(data);
+      console.log(data);
+      setParkingLots(data);
     };
 
-    fetchCities();
+    fetchParkingLots();
   }, []);
 
   return (
@@ -27,14 +27,14 @@ const HomeScreen = () => {
         <Logo />
         <Container>
           <h1>Available Parking Lots</h1>
-          <Row>
-            {cities.map((city) => (
-              <Col key={city.id} sm={12} md={6} lg={4} xl={3}>
-                {/* <h3>{city.name}</h3> */}
+          {/* <Row>
+            {parkingLots.map((parkingLot) => (
+              <Col key={parkingLot.id} sm={12} md={6} lg={4} xl={3}>
+                <h3>{parkingLot.name}</h3>
                 <City city={city} />
               </Col>
             ))}
-          </Row>
+          </Row> */}
         </Container>
       </div>
     </div>

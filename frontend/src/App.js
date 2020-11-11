@@ -36,9 +36,10 @@ function App() {
         {/* <Route exact path="/city/:id" component={CityScreen} /> */}
         <Route exact path="/city/:id" component={UserScreen} />
         {/* <Route exact path="/search/:keyword" component={HomeScreen} /> */}
-        <Route exact path="/cities" component={HomeScreen} />
+        <Route exact path="/parkinglots" component={HomeScreen} />
         <Route path="/login" component={LoginScreen} />
-        <Route exact path="/" component={LoginScreen} />
+        {/* <Route exact path="/" component={LoginScreen} /> */}
+        <Route exact path="/" component={HomeScreen} />
       </Router>
     </div>
   );

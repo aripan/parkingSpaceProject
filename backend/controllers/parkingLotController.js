@@ -6,11 +6,11 @@ import cities from "../data/cities.js";
 // @route       GET/api/cities
 // @access      private
 const getParkingLotList = asyncHandler(async (req, res) => {
-  const url_api = "https://jsonplaceholder.typicode.com/users";
-  const fetch_res = await fetch(url_api);
-  const users = await fetch_res.json();
+  const URL = "https://staging.viot.portal.graphicx.io/spnew/parkinglots";
+  const fetch_res = await fetch(URL);
+  const listOfParkingLots = await fetch_res.json();
 
-  res.json(users);
+  res.json(listOfParkingLots);
 
   // res.json(cities);
 });

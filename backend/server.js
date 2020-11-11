@@ -14,7 +14,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use("/api/cities", parkingLotRoutes);
+app.use("/api/parkinglots", parkingLotRoutes);
 app.use("/api/users", userRoute);
 
 const __dirname = path.resolve();

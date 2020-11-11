@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <Navbar expand="lg" collapseOnSelect>
-      <LinkContainer to="/cities">
+      <LinkContainer to="/parkinglots">
         <Navbar.Brand>Parking Space Analytics</Navbar.Brand>
       </LinkContainer>
 

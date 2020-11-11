@@ -21,6 +21,12 @@ const users = [
     username: "will",
     password: bcrypt.hashSync("password", 10),
   },
+  {
+    name: "Md Asaduzzaman Ripan",
+    email: "aripan017@gmail.com",
+    username: "spa_fe_interview",
+    password: bcrypt.hashSync("&O4swi142cuPa", 10),
+  },
 ];
 
 export default users;
