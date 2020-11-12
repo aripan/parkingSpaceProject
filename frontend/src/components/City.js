@@ -13,6 +13,15 @@ const City = ({ city }) => {
             </h5>
           </Card.Title>
         </Link>
+
+        {/* Used while fetching data from JSONPlaceholder */}
+        {/* <Link to={`/city/${city.id}`}>
+          <Card.Title as="div">
+            <h5>
+              <strong>{city.name}</strong>
+            </h5>
+          </Card.Title>
+        </Link> */}
       </Card.Body>
     </Card>
   );
